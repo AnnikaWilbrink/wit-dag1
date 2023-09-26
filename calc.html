@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="number" id="invoer1">
+    <input type="number" id="invoer2">
+
+    <button type="button" onclick="optellen()">Optellen</button>
+    <button type="button" onclick="vermenigvuldigen()">Vermenigvuldigen</button>
+    <button type="button" onclick="delen()">Delen</button>
+    <button type="button" onclick="aftrekken()">Aftrekken</button>
+
+    <script>
+        function calculate(operator) {
+            let invoer1Waarde = parseFloat(document.getElementById("invoer1").value);
+            let invoer2Waarde = parseFloat(document.getElementById("invoer2").value);
+
+            if (operator == "+"){
+                return invoer1Waarde + invoer2Waarde;
+            } else if (operator == "*"){
+                return invoer1Waarde * invoer2Waarde;
+            } else if (operator == "-"){
+                return invoer1Waarde - invoer2Waarde;
+            } else if (operator == "/"){
+                return invoer1Waarde / invoer2Waarde;
+            } 
+        }
+
+        function optellen() {
+            let antwoord = calculate("+");
+            alert("Optellen antwoord is "+ antwoord)
+        }
+
+        function vermenigvuldigen() {
+            let antwoord = calculate("*");
+            alert("Vermenigvuldigen antwoord is "+ antwoord)
+        }
+
+        function delen() {
+            let antwoord = calculate("/");
+            alert("Delen antwoord is "+ antwoord)
+        }
+
+        function aftrekken() {
+            let antwoord = calculate("-");
+            alert("Aftrekken antwoord is "+ antwoord)
+        }
+
+    </script>
+</body>
+</html>
